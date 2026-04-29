@@ -1,0 +1,28 @@
+{
+  "name": "btc-ticker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "dev:tauri": "npm run build && PORT=3008 node .output/server/index.mjs",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "test:branding-docs": "node scripts/verify-branding-and-docs.mjs",
+    "test:tauri-dev-config": "node scripts/verify-tauri-dev-config.mjs",
+    "test:layout": "node scripts/verify-layout-structure.mjs",
+    "test:tauri-static": "node scripts/verify-tauri-static-build.mjs",
+    "preview": "nuxt preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^3",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-process": "^2",
+    "nuxt": "^4",
+    "tailwindcss": "^4",
+    "vue": "^3"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}

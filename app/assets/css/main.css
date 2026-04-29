@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Custom animations for price changes */
+@keyframes flash-green {
+  0% { color: inherit; }
+  50% { color: #00C087; text-shadow: 0 0 8px rgba(0, 192, 135, 0.4); }
+  100% { color: inherit; }
+}
+
+@keyframes flash-red {
+  0% { color: inherit; }
+  50% { color: #FF4D4F; text-shadow: 0 0 8px rgba(255, 77, 79, 0.4); }
+  100% { color: inherit; }
+}
+
+.flash-up {
+  animation: flash-green 0.5s ease-out;
+}
+
+.flash-down {
+  animation: flash-red 0.5s ease-out;
+}
+
+/* Number transition animation */
+@keyframes slide-up {
+  from { transform: translateY(8px); opacity: 0.6; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.price-animate {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Window drag region */
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Glassmorphism background */
+.glass-bg {
+  background: rgba(40, 40, 45, 0.95);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+/* Pulse glow for live indicator */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px currentColor; }
+  50% { opacity: 0.5; box-shadow: 0 0 8px currentColor; }
+}
+
+.live-dot {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Body styling for transparent window */
+html, body {
+  background: transparent !important;
+  overflow: hidden;
+  user-select: none;
+}

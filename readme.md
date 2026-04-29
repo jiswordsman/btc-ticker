@@ -37,7 +37,7 @@
 
 #### 方式一：直接下载（推荐）
 
-1. 前往 [Releases](https://github.com/jiswordman/btc-ticker/releases) 页面
+1. 前往 [Releases](https://github.com/jiswordsman/btc-ticker/releases) 页面
 
 2. 下载最新版本的 `.dmg` 安装包
 
@@ -57,7 +57,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/jiswordman/btc-ticker.git
+git clone https://github.com/jiswordsman/btc-ticker.git
 cd btc-ticker
 
 # 2. 安装依赖
@@ -90,7 +90,7 @@ npm install -g pnpm
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/jiswordman/btc-ticker.git
+git clone https://github.com/jiswordsman/btc-ticker.git
 cd btc-ticker
 
 # 2. 安装依赖
